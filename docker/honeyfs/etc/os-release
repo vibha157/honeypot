@@ -1,0 +1,14 @@
+PRETTY_NAME="Raspbian GNU/Linux 9 (stretch)"
+NAME="Raspbian GNU/Linux"
+VERSION_ID="9"
+VERSION="9 (stretch)"
+ID=raspbian
+ID_LIKE=debian
+HOME_URL="http://www.raspbian.org/"
+SUPPORT_URL="http://www.raspbian.org/RaspbianForums"
+BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"
+
+DEVICE_MODEL="VitalsMonitor Pro v2.3.1"
+DEVICE_MANUFACTURER="MedTech Solutions"
+FIRMWARE_VERSION="2.3.1-stable"
+SERIAL_NUMBER="MT-2024-RPi4-00142"

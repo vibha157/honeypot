@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  # Cowrie SSH/Telnet Honeypot - simulates a medical IoT device
+  cowrie:
+    build: .
+    container_name: cowrie-honeypot
+    restart: unless-stopped
+    ports:
+      - "2222:2222"    # SSH honeypot port
+      - "2223:2223"    # Telnet honeypot port
+    volumes:
+      - ./cowrie-logs:/cowrie/var/log/cowrie      # logs saved here
+      - ./downloads:/cowrie/var/lib/cowrie/downloads  # malware drops saved here
+    networks:
+      - honeypot-net
+    environment:
+      - COWRIE_HOSTNAME=VitalsMonitor-RPi4
+
+networks:
+  honeypot-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
