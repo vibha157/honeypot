@@ -155,3 +155,4 @@ def generate_logs(output="cowrie-logs/cowrie.json", num_sessions=15):
 
 if __name__ == "__main__":
     generate_logs()
+    # Updated attack simulation
