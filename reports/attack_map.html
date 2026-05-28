@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_90073762bc9abf4b996def23ae6c60d4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%);
+                z-index: 1000; background: rgba(0,0,0,0.8); color: white;
+                padding: 10px 20px; border-radius: 8px; font-family: monospace;">
+        <b>IoT Honeypot - Attack Origin Map</b><br>
+        <small>VitalsMonitor-RPi4 | Healthcare Deception Network</small>
+    </div>
+    
+    
+            <div class="folium-map" id="map_90073762bc9abf4b996def23ae6c60d4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_90073762bc9abf4b996def23ae6c60d4 = L.map(
+                "map_90073762bc9abf4b996def23ae6c60d4",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_45506db5b8a19f31a5ec4a67bb1cd379 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_45506db5b8a19f31a5ec4a67bb1cd379.addTo(map_90073762bc9abf4b996def23ae6c60d4);
+        
+    
+            var circle_marker_16ea3c13f320d0b8a9ea8bc402eab07e = L.circleMarker(
+                [52.6171, 13.1207],
+                {"bubblingMouseEvents": true, "color": "#E24B4A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E24B4A", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_90073762bc9abf4b996def23ae6c60d4);
+        
+    
+        var popup_719abd557d2571508b3105b6c9b63ef7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6cad8bca0c4effc747239127478073d4 = $(`<div id="html_6cad8bca0c4effc747239127478073d4" style="width: 100.0%; height: 100.0%;">         <b>Attacker IP:</b> 185.220.101.45<br>         <b>Country:</b> Germany<br>         <b>City:</b> Brandenburg<br>         <b>ISP:</b> Stiftung Erneuerbare Freiheit<br>         <b>Org:</b> ForPrivacyNET         </div>`)[0];
+                popup_719abd557d2571508b3105b6c9b63ef7.setContent(html_6cad8bca0c4effc747239127478073d4);
+            
+        
+
+        circle_marker_16ea3c13f320d0b8a9ea8bc402eab07e.bindPopup(popup_719abd557d2571508b3105b6c9b63ef7)
+        ;
+
+        
+    
+    
+            circle_marker_16ea3c13f320d0b8a9ea8bc402eab07e.bindTooltip(
+                `<div>
+                     185.220.101.45 - Germany
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b81f471b636df6547e44d928efd4b794 = L.circleMarker(
+                [52.3676, 4.90414],
+                {"bubblingMouseEvents": true, "color": "#E24B4A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E24B4A", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_90073762bc9abf4b996def23ae6c60d4);
+        
+    
+        var popup_d0bb97913f38a2f7d57fe0af32b75bbe = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2b4d316e3930850125f1051172a9290c = $(`<div id="html_2b4d316e3930850125f1051172a9290c" style="width: 100.0%; height: 100.0%;">         <b>Attacker IP:</b> 89.248.167.131<br>         <b>Country:</b> The Netherlands<br>         <b>City:</b> Amsterdam<br>         <b>ISP:</b> IP Volume inc<br>         <b>Org:</b> IP Volume inc         </div>`)[0];
+                popup_d0bb97913f38a2f7d57fe0af32b75bbe.setContent(html_2b4d316e3930850125f1051172a9290c);
+            
+        
+
+        circle_marker_b81f471b636df6547e44d928efd4b794.bindPopup(popup_d0bb97913f38a2f7d57fe0af32b75bbe)
+        ;
+
+        
+    
+    
+            circle_marker_b81f471b636df6547e44d928efd4b794.bindTooltip(
+                `<div>
+                     89.248.167.131 - The Netherlands
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1352db5472b178321aef8e78a9ded864 = L.circleMarker(
+                [42.6695, 23.2912],
+                {"bubblingMouseEvents": true, "color": "#E24B4A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E24B4A", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_90073762bc9abf4b996def23ae6c60d4);
+        
+    
+        var popup_49a13383d29781453083832e27df159d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bbf9179694c01f53b202d3967f0cf5d2 = $(`<div id="html_bbf9179694c01f53b202d3967f0cf5d2" style="width: 100.0%; height: 100.0%;">         <b>Attacker IP:</b> 91.92.109.47<br>         <b>Country:</b> Bulgaria<br>         <b>City:</b> Sofia<br>         <b>ISP:</b> VPS.BG<br>         <b>Org:</b> VPSBG         </div>`)[0];
+                popup_49a13383d29781453083832e27df159d.setContent(html_bbf9179694c01f53b202d3967f0cf5d2);
+            
+        
+
+        circle_marker_1352db5472b178321aef8e78a9ded864.bindPopup(popup_49a13383d29781453083832e27df159d)
+        ;
+
+        
+    
+    
+            circle_marker_1352db5472b178321aef8e78a9ded864.bindTooltip(
+                `<div>
+                     91.92.109.47 - Bulgaria
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d1cc359a087a5c433424b76467cc4f5 = L.circleMarker(
+                [43.6532, -79.3832],
+                {"bubblingMouseEvents": true, "color": "#E24B4A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E24B4A", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_90073762bc9abf4b996def23ae6c60d4);
+        
+    
+        var popup_f664f8c5656e9e5a292091de5eed333a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_175f2ef786d1ab894f74023beb5fa6b4 = $(`<div id="html_175f2ef786d1ab894f74023beb5fa6b4" style="width: 100.0%; height: 100.0%;">         <b>Attacker IP:</b> 103.21.244.0<br>         <b>Country:</b> Canada<br>         <b>City:</b> Toronto<br>         <b>ISP:</b> CLOUDFLARE<br>         <b>Org:</b> Cloudflare, inc.         </div>`)[0];
+                popup_f664f8c5656e9e5a292091de5eed333a.setContent(html_175f2ef786d1ab894f74023beb5fa6b4);
+            
+        
+
+        circle_marker_9d1cc359a087a5c433424b76467cc4f5.bindPopup(popup_f664f8c5656e9e5a292091de5eed333a)
+        ;
+
+        
+    
+    
+            circle_marker_9d1cc359a087a5c433424b76467cc4f5.bindTooltip(
+                `<div>
+                     103.21.244.0 - Canada
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_999c2d12b0e88f9f2a1291fca1b5a3ac = L.circleMarker(
+                [32.8061, -97.1578],
+                {"bubblingMouseEvents": true, "color": "#E24B4A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E24B4A", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_90073762bc9abf4b996def23ae6c60d4);
+        
+    
+        var popup_1f0f43fc5c75ed8f20fa934f827551a6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_667311a246f094cc93cead35924b1963 = $(`<div id="html_667311a246f094cc93cead35924b1963" style="width: 100.0%; height: 100.0%;">         <b>Attacker IP:</b> 198.199.10.234<br>         <b>Country:</b> United States<br>         <b>City:</b> Hurst<br>         <b>ISP:</b> Bell Textron Inc<br>         <b>Org:</b> Bell Textron Inc         </div>`)[0];
+                popup_1f0f43fc5c75ed8f20fa934f827551a6.setContent(html_667311a246f094cc93cead35924b1963);
+            
+        
+
+        circle_marker_999c2d12b0e88f9f2a1291fca1b5a3ac.bindPopup(popup_1f0f43fc5c75ed8f20fa934f827551a6)
+        ;
+
+        
+    
+    
+            circle_marker_999c2d12b0e88f9f2a1291fca1b5a3ac.bindTooltip(
+                `<div>
+                     198.199.10.234 - United States
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4955639476d497b6d80096b6fd3f5f2f = L.circleMarker(
+                [54.9206, 23.9497],
+                {"bubblingMouseEvents": true, "color": "#E24B4A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E24B4A", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_90073762bc9abf4b996def23ae6c60d4);
+        
+    
+        var popup_1d247aa348bbbd1743fb5314a3602bc2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_106f0bc0f8fb6676434bc2327b3205bb = $(`<div id="html_106f0bc0f8fb6676434bc2327b3205bb" style="width: 100.0%; height: 100.0%;">         <b>Attacker IP:</b> 194.165.16.29<br>         <b>Country:</b> Lithuania<br>         <b>City:</b> Kaunas<br>         <b>ISP:</b> Flyservers S.A.<br>         <b>Org:</b> Flyservers S.A         </div>`)[0];
+                popup_1d247aa348bbbd1743fb5314a3602bc2.setContent(html_106f0bc0f8fb6676434bc2327b3205bb);
+            
+        
+
+        circle_marker_4955639476d497b6d80096b6fd3f5f2f.bindPopup(popup_1d247aa348bbbd1743fb5314a3602bc2)
+        ;
+
+        
+    
+    
+            circle_marker_4955639476d497b6d80096b6fd3f5f2f.bindTooltip(
+                `<div>
+                     194.165.16.29 - Lithuania
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ddb910979a75a512228cd8e9e31787d = L.circleMarker(
+                [37.5625, -122.0004],
+                {"bubblingMouseEvents": true, "color": "#E24B4A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E24B4A", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_90073762bc9abf4b996def23ae6c60d4);
+        
+    
+        var popup_690e0dcc7bf6e8eb432b1f5d44e8039a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9e70d1c000ad3b1816c636b29c50e3a7 = $(`<div id="html_9e70d1c000ad3b1816c636b29c50e3a7" style="width: 100.0%; height: 100.0%;">         <b>Attacker IP:</b> 45.33.32.156<br>         <b>Country:</b> United States<br>         <b>City:</b> Fremont<br>         <b>ISP:</b> Akamai Technologies, Inc.<br>         <b>Org:</b> Linode         </div>`)[0];
+                popup_690e0dcc7bf6e8eb432b1f5d44e8039a.setContent(html_9e70d1c000ad3b1816c636b29c50e3a7);
+            
+        
+
+        circle_marker_9ddb910979a75a512228cd8e9e31787d.bindPopup(popup_690e0dcc7bf6e8eb432b1f5d44e8039a)
+        ;
+
+        
+    
+    
+            circle_marker_9ddb910979a75a512228cd8e9e31787d.bindTooltip(
+                `<div>
+                     45.33.32.156 - United States
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

